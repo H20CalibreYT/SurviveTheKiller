@@ -1,0 +1,273 @@
+local function plr()
+    return game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart")
+end
+local mypos = plr().CFrame
+local function backpack()
+    return game:GetService("Players").LocalPlayer.PlayerGui.MainGui.Backpack.Count.Text
+end
+local function disableragdoll()
+    plr().Parent.RagdollConstraints:Destroy()
+    plr().Parent.RagdollLocal.Disabled = true
+end
+local function roundpos(object)
+    return math.round(object.Position.X)..", "..math.round(object.Position.Y)..", "..math.round(object.Position.Z)
+end
+
+local loot = game.Workspace.CurrentMap.Loot
+
+if plr().Parent:FindFirstChild("RagdollConstraints") then
+    disableragdoll()
+end
+
+local function nofall() --Credits to InfYield
+    local BeenASecond, V3 = false, Vector3.new(0, 5, 0)
+	delay(1, function()
+		BeenASecond = true
+	end)
+	while not BeenASecond do
+		for _, v in ipairs(game.Players.LocalPlayer.Character:GetDescendants()) do
+			if v.IsA(v, "BasePart") then
+				v.Velocity, v.RotVelocity = V3, V3
+			end
+		end
+		wait()
+	end
+end
+
+Mi = "treasure_chest"
+
+Gold1 = "pendant"
+Gold2 = "gold_bars"
+
+Ro1 = "smartphone"
+Ro2 = "trophy"
+Ro3 = "binoculars"
+Ro4 = "laptop"
+Ro5 = "welding_goggles"
+Ro6 = "smartwatch"
+
+Mo1 = "golden_compass"
+Mo2 = "golden_pocket_watch"
+Mo3 = "apocalypse_helmet"
+
+Az1 = "rusty_cleaver"
+Az2 = "rusty_pipe"
+Az3 = "car_engine"
+Az4 = "old_slycer"
+Az5 = "tire"
+Az6 = "gen_1"
+Az7 = "pickaxe"
+Az8 = "busted_boombox"
+
+Gr1 = "shattered_shades"
+Gr2 = "broken_bottles"
+Gr3 = "green_bottle"
+Gr4 = "broken_bulb"
+Gr5 = "rusty_lantern"
+Gr6 = "rope"
+Gr7 = "gas_can"
+Gr8 = "shatteres_bottle"
+
+for i,v in pairs(loot:GetChildren()) do
+    if backpack() ~= "10/10" and backpack() ~= "12/12" then
+        if v.Name == Mi then
+            plr().CFrame = CFrame.new(loot:FindFirstChild(Mi).LootProxBlock.Position)
+            nofall()
+            wait(0.5)
+            fireproximityprompt(loot:FindFirstChild(Mi).LootProxBlock.LootProximityPrompt)
+            
+        end
+    end
+end
+
+for i,v in pairs(loot:GetChildren()) do
+    if backpack() ~= "10/10" and backpack() ~= "12/12" then
+        if v.Name == Gold1 then
+            plr().CFrame = CFrame.new(loot:FindFirstChild(Gold1).LootProxBlock.Position)
+            nofall()
+            wait(0.3)
+            fireproximityprompt(loot:FindFirstChild(Gold1).LootProxBlock.LootProximityPrompt)
+            
+        elseif v.Name == Gold2 then
+            plr().CFrame = CFrame.new(loot:FindFirstChild(Gold2).LootProxBlock.Position)
+            nofall()
+            wait(0.3)
+            fireproximityprompt(loot:FindFirstChild(Gold2).LootProxBlock.LootProximityPrompt)
+            
+        end
+    end
+end
+
+for i,v in pairs(loot:GetChildren()) do
+    if backpack() ~= "10/10" and backpack() ~= "12/12" then
+        if v.Name == Mo1 then
+            plr().CFrame = CFrame.new(loot:FindFirstChild(Mo1).LootProxBlock.Position)
+            nofall()
+            wait(0.3)
+            fireproximityprompt(loot:FindFirstChild(Mo1).LootProxBlock.LootProximityPrompt)
+            
+        elseif v.Name == Mo2 then
+            plr().CFrame = CFrame.new(loot:FindFirstChild(Mo2).LootProxBlock.Position)
+            nofall()
+            wait(0.3)
+            fireproximityprompt(loot:FindFirstChild(Mo2).LootProxBlock.LootProximityPrompt)
+            
+        elseif v.Name == Mo3 then
+            plr().CFrame = CFrame.new(loot:FindFirstChild(Mo3).LootProxBlock.Position)
+            nofall()
+            wait(0.3)
+            fireproximityprompt(loot:FindFirstChild(Mo3).LootProxBlock.LootProximityPrompt)
+            
+        end
+    end
+end
+
+for i,v in pairs(loot:GetChildren()) do
+    if backpack() ~= "10/10" and backpack() ~= "12/12" then
+        if v.Name == Ro1 then
+            plr().CFrame = CFrame.new(loot:FindFirstChild(Ro1).LootProxBlock.Position)
+            nofall()
+            wait(0.3)
+            fireproximityprompt(loot:FindFirstChild(Ro1).LootProxBlock.LootProximityPrompt)
+            
+        elseif v.Name == Ro2 then
+            plr().CFrame = CFrame.new(loot:FindFirstChild(Ro2).LootProxBlock.Position)
+            nofall()
+            wait(0.3)
+            fireproximityprompt(loot:FindFirstChild(Ro2).LootProxBlock.LootProximityPrompt)
+            
+        elseif v.Name == Ro3 then
+            plr().CFrame = CFrame.new(loot:FindFirstChild(Ro3).LootProxBlock.Position)
+            nofall()
+            wait(0.3)
+            fireproximityprompt(loot:FindFirstChild(Ro3).LootProxBlock.LootProximityPrompt)
+            
+        elseif v.Name == Ro4 then
+            plr().CFrame = CFrame.new(loot:FindFirstChild(Ro4).LootProxBlock.Position)
+            nofall()
+            wait(0.3)
+            fireproximityprompt(loot:FindFirstChild(Ro4).LootProxBlock.LootProximityPrompt)
+            
+        elseif v.Name == Ro5 then
+            plr().CFrame = CFrame.new(loot:FindFirstChild(Ro5).LootProxBlock.Position)
+            nofall()
+            wait(0.3)
+            fireproximityprompt(loot:FindFirstChild(Ro5).LootProxBlock.LootProximityPrompt)
+            
+        elseif v.Name == Ro6 then
+            plr().CFrame = CFrame.new(loot:FindFirstChild(Ro6).LootProxBlock.Position)
+            nofall()
+            wait(0.3)
+            fireproximityprompt(loot:FindFirstChild(Ro6).LootProxBlock.LootProximityPrompt)
+            
+        end
+    end
+end
+for i,v in pairs(loot:GetChildren()) do
+    if backpack() ~= "10/10" and backpack() ~= "12/12" then
+        if v.Name == Az1 then
+            plr().CFrame = CFrame.new(loot:FindFirstChild(Az1).LootProxBlock.Position)
+            nofall()
+            wait(0.3)
+            fireproximityprompt(loot:FindFirstChild(Az1).LootProxBlock.LootProximityPrompt)
+            
+        elseif v.Name == Az2 then
+            plr().CFrame = CFrame.new(loot:FindFirstChild(Az2).LootProxBlock.Position)
+            nofall()
+            wait(0.3)
+            fireproximityprompt(loot:FindFirstChild(Az2).LootProxBlock.LootProximityPrompt)
+            
+        elseif v.Name == Az3 then
+            plr().CFrame = CFrame.new(loot:FindFirstChild(Az3).LootProxBlock.Position)
+            nofall()
+            wait(0.3)
+            fireproximityprompt(loot:FindFirstChild(Az3).LootProxBlock.LootProximityPrompt)
+            
+        elseif v.Name == Az4 then
+            plr().CFrame = CFrame.new(loot:FindFirstChild(Az4).LootProxBlock.Position)
+            nofall()
+            wait(0.3)
+            fireproximityprompt(loot:FindFirstChild(Az4).LootProxBlock.LootProximityPrompt)
+            
+        elseif v.Name == Az5 then
+            plr().CFrame = CFrame.new(loot:FindFirstChild(Az5).LootProxBlock.Position)
+            nofall()
+            wait(0.3)
+            fireproximityprompt(loot:FindFirstChild(Az5).LootProxBlock.LootProximityPrompt)
+            
+        elseif v.Name == Az6 then
+            plr().CFrame = CFrame.new(loot:FindFirstChild(Az6).LootProxBlock.Position)
+            nofall()
+            wait(0.3)
+            fireproximityprompt(loot:FindFirstChild(Az6).LootProxBlock.LootProximityPrompt)
+            
+        elseif v.Name == Az7 then
+            plr().CFrame = CFrame.new(loot:FindFirstChild(Az7).LootProxBlock.Position)
+            nofall()
+            wait(0.3)
+            fireproximityprompt(loot:FindFirstChild(Az7).LootProxBlock.LootProximityPrompt)
+            
+        elseif v.Name == Az8 then
+            plr().CFrame = CFrame.new(loot:FindFirstChild(Az8).LootProxBlock.Position)
+            nofall()
+            wait(0.3)
+            fireproximityprompt(loot:FindFirstChild(Az8).LootProxBlock.LootProximityPrompt)
+            
+        end
+    end
+end
+
+for i,v in pairs(loot:GetChildren()) do
+    if backpack() ~= "10/10" and backpack() ~= "12/12" then
+        if v.Name == Gr1 then
+            plr().CFrame = CFrame.new(loot:FindFirstChild(Gr1).LootProxBlock.Position)
+            nofall()
+            wait(0.3)
+            fireproximityprompt(loot:FindFirstChild(Gr1).LootProxBlock.LootProximityPrompt)
+            
+        elseif v.Name == Gr2 then
+            plr().CFrame = CFrame.new(loot:FindFirstChild(Gr2).LootProxBlock.Position)
+            nofall()
+            wait(0.3)
+            fireproximityprompt(loot:FindFirstChild(Gr2).LootProxBlock.LootProximityPrompt)
+            
+        elseif v.Name == Gr3 then
+            plr().CFrame = CFrame.new(loot:FindFirstChild(Gr3).LootProxBlock.Position)
+            nofall()
+            wait(0.3)
+            fireproximityprompt(loot:FindFirstChild(Gr3).LootProxBlock.LootProximityPrompt)
+            
+        elseif v.Name == Gr4 then
+            plr().CFrame = CFrame.new(loot:FindFirstChild(Gr4).LootProxBlock.Position)
+            nofall()
+            wait(0.3)
+            fireproximityprompt(loot:FindFirstChild(Gr4).LootProxBlock.LootProximityPrompt)
+            
+        elseif v.Name == Gr5 then
+            plr().CFrame = CFrame.new(loot:FindFirstChild(Gr5).LootProxBlock.Position)
+            nofall()
+            wait(0.3)
+            fireproximityprompt(loot:FindFirstChild(Gr5).LootProxBlock.LootProximityPrompt)
+            
+        elseif v.Name == Gr6 then
+            plr().CFrame = CFrame.new(loot:FindFirstChild(Gr6).LootProxBlock.Position)
+            nofall()
+            wait(0.3)
+            fireproximityprompt(loot:FindFirstChild(Gr6).LootProxBlock.LootProximityPrompt)
+            
+        elseif v.Name == Gr7 then
+            plr().CFrame = CFrame.new(loot:FindFirstChild(Gr7).LootProxBlock.Position)
+            nofall()
+            wait(0.3)
+            fireproximityprompt(loot:FindFirstChild(Gr7).LootProxBlock.LootProximityPrompt)
+            
+        elseif v.Name == Gr8 then
+            plr().CFrame = CFrame.new(loot:FindFirstChild(Gr8).LootProxBlock.Position)
+            nofall()
+            wait(0.3)
+            fireproximityprompt(loot:FindFirstChild(Gr8).LootProxBlock.LootProximityPrompt)
+            
+        end
+    end
+end
+plr().CFrame = mypos
