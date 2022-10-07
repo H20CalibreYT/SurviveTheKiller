@@ -1,4 +1,4 @@
-local x,z = pcall(function()
+local successx, errormsgx = pcall(function()
 local function plr()
     return game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart")
 end
